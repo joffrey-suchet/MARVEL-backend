@@ -12,6 +12,6 @@ app.use(usercomics);
 const usercharacter = require("./routes/character");
 app.use(usercharacter);
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, () => {
   console.log("server has starded");
 });
