@@ -7,10 +7,10 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
-const userRoutes = require("./routes/comics");
-app.use(userRoutes);
-const userComics = require("./routes/character");
-app.use(userComics);
+const usercomics = require("./routes/comics");
+app.use(usercomics);
+const usercharacter = require("./routes/character");
+app.use(usercharacter);
 
 app.listen(3001, () => {
   console.log("server has starded");
