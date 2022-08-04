@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require("axios");
 
 router.get("/characters", async (req, res) => {
-  console.log("route characterId");
+  console.log("route character");
   try {
     axios
       .get(
