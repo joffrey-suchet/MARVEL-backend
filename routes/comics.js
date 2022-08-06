@@ -9,7 +9,7 @@ router.get("/comics", async (req, res) => {
   try {
     axios
       .get(
-        `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${process.env.API_KEY}&title=${req.query.title}`
+        `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${process.env.API_KEY}&title=${req.query.title}&skip=${req.query.skip}`
       )
       .then((response) => {
         let comics = response.data;
