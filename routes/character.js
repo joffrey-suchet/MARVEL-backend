@@ -7,7 +7,7 @@ router.get("/characters", async (req, res) => {
   try {
     axios
       .get(
-        `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.API_KEY}&name=${req.query.name}`
+        `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.API_KEY}&name=${req.query.name}&skip=${req.query.skip}`
       )
       .then((response) => {
         const characters = response.data;
